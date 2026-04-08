@@ -1,0 +1,10 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+    level: 6
+    paths:
+        - eternal-product-category-faq.php
+    phpVersion: 80300
+    bootstrapFiles: []
+    scanFiles: []

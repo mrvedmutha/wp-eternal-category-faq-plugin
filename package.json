@@ -1,0 +1,21 @@
+{
+  "name": "eternal-product-category-faq",
+  "version": "1.0.0",
+  "description": "Eternal Product Category FAQ plugin",
+  "private": true,
+  "scripts": {
+    "lint:php": "vendor/bin/phpcs --standard=phpcs.xml",
+    "lint:phpstan": "vendor/bin/phpstan analyse --configuration=phpstan.neon --no-progress --memory-limit=1G",
+    "ai:check": "npm run lint:php && npm run lint:phpstan",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.php": [
+      "vendor/bin/phpcs --standard=phpcs.xml"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  }
+}
