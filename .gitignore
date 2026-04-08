@@ -1,0 +1,19 @@
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# WordPress specific
+.wp-env/
+
+# Node modules (if adding build process later)
+node_modules/
+
+# Logs
+*.log
