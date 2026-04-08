@@ -54,12 +54,12 @@ class Eternal_Product_Category_FAQ {
 			<div id="faq-repeater-container">
 				<div class="faq-row" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; background: #f9f9f9;">
 					<div style="margin-bottom: 10px;">
-						<label style="font-weight: bold;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
-						<textarea name="faq_questions[0][question]" class="faq-question" rows="2" style="width: 100%;"></textarea>
+						<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
+						<textarea name="faq_questions[0][question]" class="faq-question" rows="2" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter your question here (e.g., What are the benefits of this product?)', 'eternal-product-category-faq' ); ?>"></textarea>
 					</div>
 					<div>
-						<label style="font-weight: bold;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
-						<textarea name="faq_questions[0][answer]" class="faq-answer" rows="3" style="width: 100%;"></textarea>
+						<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
+						<textarea name="faq_questions[0][answer]" class="faq-answer" rows="3" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter the answer to the question above', 'eternal-product-category-faq' ); ?>"></textarea>
 					</div>
 				</div>
 			</div>
@@ -93,12 +93,12 @@ class Eternal_Product_Category_FAQ {
 						<?php foreach ( $faq_questions as $index => $faq ) : ?>
 							<div class="faq-row" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; background: #f9f9f9;">
 								<div style="margin-bottom: 10px;">
-									<label style="font-weight: bold;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
-									<textarea name="faq_questions[<?php echo esc_attr( $index ); ?>][question]" class="faq-question" rows="2" style="width: 100%;"><?php echo esc_textarea( $faq['question'] ); ?></textarea>
+									<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
+									<textarea name="faq_questions[<?php echo esc_attr( $index ); ?>][question]" class="faq-question" rows="2" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter your question here (e.g., What are the benefits of this product?)', 'eternal-product-category-faq' ); ?>"><?php echo esc_textarea( $faq['question'] ); ?></textarea>
 								</div>
 								<div>
-									<label style="font-weight: bold;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
-									<textarea name="faq_questions[<?php echo esc_attr( $index ); ?>][answer]" class="faq-answer" rows="3" style="width: 100%;"><?php echo esc_textarea( $faq['answer'] ); ?></textarea>
+									<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
+									<textarea name="faq_questions[<?php echo esc_attr( $index ); ?>][answer]" class="faq-answer" rows="3" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter the answer to the question above', 'eternal-product-category-faq' ); ?>"><?php echo esc_textarea( $faq['answer'] ); ?></textarea>
 								</div>
 								<button type="button" class="button remove-faq-button" style="margin-top: 10px; color: #a00;">
 									<?php esc_html_e( 'Remove FAQ', 'eternal-product-category-faq' ); ?>
@@ -108,12 +108,12 @@ class Eternal_Product_Category_FAQ {
 					<?php else : ?>
 						<div class="faq-row" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; background: #f9f9f9;">
 							<div style="margin-bottom: 10px;">
-								<label style="font-weight: bold;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
-								<textarea name="faq_questions[0][question]" class="faq-question" rows="2" style="width: 100%;"></textarea>
+								<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Question:', 'eternal-product-category-faq' ); ?></label>
+								<textarea name="faq_questions[0][question]" class="faq-question" rows="2" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter your question here (e.g., What are the benefits of this product?)', 'eternal-product-category-faq' ); ?>"></textarea>
 							</div>
 							<div>
-								<label style="font-weight: bold;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
-								<textarea name="faq_questions[0][answer]" class="faq-answer" rows="3" style="width: 100%;"></textarea>
+								<label style="font-weight: bold; color: #0073aa;"><?php esc_html_e( 'Answer:', 'eternal-product-category-faq' ); ?></label>
+								<textarea name="faq_questions[0][answer]" class="faq-answer" rows="3" style="width: 100%;" placeholder="<?php esc_attr_e( 'Enter the answer to the question above', 'eternal-product-category-faq' ); ?>"></textarea>
 							</div>
 							<button type="button" class="button remove-faq-button" style="margin-top: 10px; color: #a00;">
 								<?php esc_html_e( 'Remove FAQ', 'eternal-product-category-faq' ); ?>
@@ -195,9 +195,11 @@ class Eternal_Product_Category_FAQ {
 			'eternal-faq-repeater',
 			'eternalFaqData',
 			array(
-				'removeText'    => esc_html__( 'Remove FAQ', 'eternal-product-category-faq' ),
-				'questionLabel' => esc_html__( 'Question:', 'eternal-product-category-faq' ),
-				'answerLabel'   => esc_html__( 'Answer:', 'eternal-product-category-faq' ),
+				'removeText'          => esc_html__( 'Remove FAQ', 'eternal-product-category-faq' ),
+				'questionLabel'       => esc_html__( 'Question:', 'eternal-product-category-faq' ),
+				'answerLabel'         => esc_html__( 'Answer:', 'eternal-product-category-faq' ),
+				'questionPlaceholder' => esc_attr__( 'Enter your question here (e.g., What are the benefits of this product?)', 'eternal-product-category-faq' ),
+				'answerPlaceholder'   => esc_attr__( 'Enter the answer to the question above', 'eternal-product-category-faq' ),
 			)
 		);
 	}

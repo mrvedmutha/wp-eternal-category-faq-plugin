@@ -24,14 +24,14 @@
 
             // Question field
             var questionDiv = $('<div style="margin-bottom: 10px;"></div>');
-            questionDiv.append('<label style="font-weight: bold;">' + eternalFaqData.questionLabel + '</label>');
-            questionDiv.append('<textarea name="faq_questions[' + rowCount + '][question]" class="faq-question" rows="2" style="width: 100%;"></textarea>');
+            questionDiv.append('<label style="font-weight: bold; color: #0073aa;">' + eternalFaqData.questionLabel + '</label>');
+            questionDiv.append('<textarea name="faq_questions[' + rowCount + '][question]" class="faq-question" rows="2" style="width: 100%;" placeholder="' + eternalFaqData.questionPlaceholder + '"></textarea>');
             newRow.append(questionDiv);
 
             // Answer field
             var answerDiv = $('<div></div>');
-            answerDiv.append('<label style="font-weight: bold;">' + eternalFaqData.answerLabel + '</label>');
-            answerDiv.append('<textarea name="faq_questions[' + rowCount + '][answer]" class="faq-answer" rows="3" style="width: 100%;"></textarea>');
+            answerDiv.append('<label style="font-weight: bold; color: #0073aa;">' + eternalFaqData.answerLabel + '</label>');
+            answerDiv.append('<textarea name="faq_questions[' + rowCount + '][answer]" class="faq-answer" rows="3" style="width: 100%;" placeholder="' + eternalFaqData.answerPlaceholder + '"></textarea>');
             newRow.append(answerDiv);
 
             // Remove button
